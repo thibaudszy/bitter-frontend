@@ -3,12 +3,12 @@ import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { selectUserLanguage } from "../store/user/selectors";
 import { useSelector } from "react-redux";
-import translation from "../pages/MyRecipes/translation";
+//import translation from "../pages/MyRecipes/translation";
 
 export default function ExploreRecipesButton() {
   const userLanguage: Language = useSelector(selectUserLanguage);
   const history = useHistory();
-  const { t_import_recipe } = translation[userLanguage];
+  //const { t_import_recipe } = translation[userLanguage];
 
   return (
     <Button
@@ -16,7 +16,7 @@ export default function ExploreRecipesButton() {
       onClick={() => history.push("/explore-recipes")}
     >
       {" "}
-      {t_import_recipe}
+      t_import_recipe
     </Button>
   );
 }
