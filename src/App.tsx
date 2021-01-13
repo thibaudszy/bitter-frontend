@@ -11,7 +11,11 @@ import HomePage from "./pages/HomePage/HomePage";
 // import MyRecipes from "./pages/MyRecipes/MyRecipes";
 // import RecipePage from "./pages/RecipePage/RecipePage";
 // import ImportRecipes from "./pages/ImportRecipes/ImportRecipes";
-import { selectToken, selectUserId } from "./store/user/selectors";
+import {
+  selectToken,
+  selectUserId,
+  selectUserLanguage,
+} from "./store/user/selectors";
 import { getUserWithStoredToken } from "./store/user/actions";
 import { useSelector, useDispatch } from "react-redux";
 import MessageBox from "./components/MessageBox";
@@ -27,6 +31,7 @@ function App() {
   const dispatch = useDispatch();
   const userId = useSelector(selectUserId);
   const isLoading = useSelector(selectAppLoading);
+  const userLanguage: Language = useSelector(selectUserLanguage);
 
   useEffect(() => {
     // if the user reloads the app, we fetch his data from the server.

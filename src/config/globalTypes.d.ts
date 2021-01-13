@@ -12,10 +12,10 @@ enum Genders {
 type Gender = keyof typeof Genders;
 
 interface TranslationItem {
-  [language: string]: string;
+  [refTranslation: string]: string;
 }
 interface TranslationObject {
-  [name: string]: TranslationItem;
+  [language: string]: TranslationItem;
 }
 interface Action {
   type: string;
@@ -26,7 +26,7 @@ interface User {
   lastName: string;
   email: string;
   password: string;
-  language: "En-GB" | "Fr-FR";
+  language: Language;
   gender: "male" | "female" | "other";
 }
 interface MaltAddition {
