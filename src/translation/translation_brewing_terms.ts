@@ -1,4 +1,4 @@
-const translation: TranslationObject = {
+const translation_brewing_terms = {
   "En-GB": {
     t_enter_your_brewlength: "How much beer do you want to brew? ",
     t_fermentables: "Fermentables",
@@ -63,4 +63,4 @@ const translation: TranslationObject = {
   },
 };
 
-export default translation;
+export default translation_brewing_terms;

@@ -3,12 +3,12 @@ import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { selectUserLanguage } from "../store/user/selectors";
 import { useSelector } from "react-redux";
-import translation from "../pages/ImportRecipes/translation";
+//import translation from "../pages/ImportRecipes/translation";
 
 export default function RecipeCalculatorButton() {
   const userLanguage: Language = useSelector(selectUserLanguage);
   const history = useHistory();
-  const { t_recipe_calculator } = translation[userLanguage];
+  //const { t_recipe_calculator } = translation[userLanguage];
   return (
     <Button
       className="MyRecipes-buttons"
@@ -17,7 +17,7 @@ export default function RecipeCalculatorButton() {
       }}
     >
       {" "}
-      {t_recipe_calculator}
+      t_recipe_calculator
     </Button>
   );
 }
