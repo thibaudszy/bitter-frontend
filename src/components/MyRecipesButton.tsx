@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { selectUserLanguage } from "../store/user/selectors";
 import { useSelector } from "react-redux";
+import getTranslation from "../translation";
 
 export default function MyRecipesButton() {
   const userLanguage: Language = useSelector(selectUserLanguage);
@@ -14,8 +15,7 @@ export default function MyRecipesButton() {
       className="MyRecipes-buttons"
       onClick={() => history.push("/recipes")}
     >
-      {" "}
-      t_my_recipes
+      {getTranslation("t_my_recipes")}
     </Button>
   );
 }

@@ -1,7 +1,6 @@
 import translation_brewing_terms from "./translation_brewing_terms";
 import translation_general from "./translation_general";
 import translation_navigation from "./translation_navigation";
-import user from "../store/user/reducer";
 import store from "../store";
 const translationObjects = [
   translation_brewing_terms,

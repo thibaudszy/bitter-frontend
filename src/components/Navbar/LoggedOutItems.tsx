@@ -1,9 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-import { selectUserLanguage } from "../../store/user/selectors";
-import translation from "./translation";
-import { useSelector } from "react-redux";
+import getTranslation from "../../translation";
 
 export default function LoggedOutItems() {
   const history = useHistory();
@@ -13,22 +11,20 @@ export default function LoggedOutItems() {
   const signUpClickHandler = () => {
     history.push("/signup");
   };
-  const userLanguage: Language = useSelector(selectUserLanguage);
-  const { LogIn, SignUp } = translation[userLanguage];
+
   return (
     <div>
       <Button
         style={{ marginRight: "1em" }}
         onClick={() => loginClickHandler()}
       >
-        {LogIn}
+        {getTranslation("t_logIn")}
       </Button>
       <Button
         style={{ marginRight: "1em" }}
         onClick={() => signUpClickHandler()}
       >
-        {" "}
-        {SignUp}{" "}
+        {getTranslation("t_signUp")}{" "}
       </Button>
     </div>
   );
