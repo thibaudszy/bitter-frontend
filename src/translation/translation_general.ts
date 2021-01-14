@@ -6,6 +6,8 @@ const translation_general = {
     enter_email: "Enter your email",
     password: "Password",
     click_to_sign_up: "Click here to sign up",
+    t_not_logged_in_message: "Sign-up or log in to start brewing",
+    t_brew_with_confidence: "Brew with confidence",
   },
   "Fr-FR": {
     LogInPageTitle: "Connectez-vous",
@@ -14,6 +16,9 @@ const translation_general = {
     enter_email: "Votre adresse email",
     password: "Mot de passe",
     click_to_sign_up: "Cliquez ici pour créer un compte",
+    t_not_logged_in_message:
+      "Creez un compte ou connectez-vous pour commencer a brasser",
+    t_brew_with_confidence: "Brassez confiant",
   },
 };
 
