@@ -1,5 +1,5 @@
 .background {
-  height: 85vh;
+  min-height: inherit;
   display: flex;
   flex-direction: column;
   background-image: url("../../images/hops.jpg");
