@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { selectUserLanguage } from "../store/user/selectors";
 import { useSelector } from "react-redux";
+import getTranslation from "../translation";
 //import translation from "../pages/ImportRecipes/translation";
 
 export default function RecipeCalculatorButton() {
@@ -16,8 +17,7 @@ export default function RecipeCalculatorButton() {
         history.push("/recipe-calculator");
       }}
     >
-      {" "}
-      t_recipe_calculator
+      {getTranslation("t_recipe_calculator")}
     </Button>
   );
 }
